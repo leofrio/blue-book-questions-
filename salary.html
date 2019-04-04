@@ -1,0 +1,41 @@
+<script> 
+function skip() { 
+	document.write("<br>") 
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+var name=prompt("hello there what is your name?")
+alert("hello there " + name + " on this program we will choose one of the 4 options we will give you what you want") 
+var want=prompt("so," + name + " choose one of the 4: new salary,vacation,extrapay, nothing") 
+if(want == "new salary") { 
+	var salary=parseFloat(prompt("how much is your salary?")) 
+		if(salary < 210) { 
+			show("your new salary equals " + (salary * 1.15) + "R$")
+		} 
+		if(salary >= 210 && salary <= 600){ 
+			show("your new salary equals " + (salary * 1.1) + "R$")
+		} 
+		if(salary > 600) { 
+			show("your new salary equals " + (salary * 1.05) + "R$")
+		} 		
+} 
+if(want == "vacation"){
+	var salary=parseFloat(prompt("how much is your salary?")) 
+	show("your vacation value equals: " + (salary + (salary/3)).toFixed(2) + "R$")
+} 
+if(want == "extrapay") { 
+	var salary=parseFloat(prompt("how much is your salary?")) 
+	var months=parseFloat(prompt("how many months did you work at the company? Max 12")) 
+	if(months <= 12 && months > 0){ 
+		show("your 13th extrapay equals " + (salary + ((salary * months)/12)) + "R$") 
+	} 
+	else{ 
+		show("<h1>sorry max months is 12, and you can't have worked negative months, please try again</h1>")
+	}
+} 
+if(want == "nothing") { 
+	show("okay then feel free to try any of the other 3 opitions that actually have a function")
+}
+</script>

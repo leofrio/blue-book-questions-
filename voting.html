@@ -1,0 +1,81 @@
+<script> 
+function skip() { 
+	document.write("<br>")
+}  
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+function A(al) { 
+	alert(al) 
+} 
+function percentage(a,b) { 
+var p=((a/b) * 100)  
+return p 
+}     
+var limit=parseFloat(prompt("how many people will be voting"))
+var vote1=0 
+var vote2=0 
+var vote3=0 
+var vote4=0 
+var vote5=0 
+var vote6=0
+for(var n = 1; n <= limit;n++) { 
+	var vote=prompt("hi person number " + n + " what is your vote?1-arnaldo 2-blausterio 3-buracito 4-clara 5-blank 6-white; type only the number you wish to vote")
+	if(vote == "1" || vote == "2"|| vote == "3" || vote == "4" || vote == "5" || vote == "6") { 
+		if(vote == "1") {
+			vote1=vote1+1
+		}  
+		if(vote == "2") {
+			vote2=vote2+1
+		} 
+		if(vote == "3") {
+			vote3=vote3+1
+		} 
+		if(vote == "4") {
+			vote4=vote4+1
+		}
+		if(vote == "5") {
+			vote5=vote5+1
+		}
+		if(vote == "6") {
+			vote6=vote6+1
+		}
+	} 
+	else { 
+		show("<h1> that number was invalid</h1><h5>please only put the opitions showed</h5>")  
+		break
+	} 
+} 
+var percentage1=percentage(vote1,limit)
+var percentage2=percentage(vote2,limit)
+var percentage3=percentage(vote3,limit)
+var percentage4=percentage(vote4,limit)
+var percentage5=percentage(vote5,limit)
+var percentage6=percentage(vote6,limit) 
+show("arnaldo got "+ percentage1 + "% of the votes, or " + vote1 + " votes in total")  
+show("blausterio got "+ percentage2 + "% of the votes, or " + vote2 + " votes in total") 
+show("buracito got "+ percentage3 + "% of the votes, or " + vote3 + " votes in total")  
+show("clara got "+ percentage4 + "% of the votes, or " + vote4 + " votes in total") 
+show("amounts of blank votes equal " + percentage5 + "% of all the votes or " + vote5 + " in total") 
+show("amounts of white votes equal " + percentage6 + "% of all the votes or " + vote6 + " in total") 
+if(percentage5 >= 50 || percentage6 >= 50 || (percentage6 + percentage5) >= 50 ){ 
+	show("<big><strong>half or more than half of the votes are either white or blank, do something so that people vote more!</strong></big>")
+} 
+if(percentage1 > percentage2 && percentage1 > percentage3 && percentage1 > percentage4 ) { 
+	show("<h3>ARNALDO WON THE ELECTION</h3>") 
+	show("<strong><big>the god arnaldo won,all is saved, arnaldo will take care of everything he is smart inclusive and cares for every minority, your country will not only prosper, it will be a global UTOPIA</big></strong>")
+}  
+if(percentage2 > percentage1 && percentage2 > percentage3 && percentage2 > percentage4 ) { 
+	show("<h3>BLAUSTERIO WON THE ELECTION</h3>") 
+	show("<strong><big>BLAUSTERIO WON NOW THIS COUNTRY IS CRAZY BLAUSTERIO DOESNT GIVE A SHIT SO THE COUNTRY OR YOU DONT GIVE A SHIT ANYMORE SO RELAX</big></strong>")
+} 
+if(percentage3 > percentage1 && percentage3 > percentage2 && percentage3 > percentage4 ) { 
+	show("<h3>BURACITO WON THE ELECTION!</h3>") 
+	show("<strong><big>your country is screwed...</big></strong>")
+} 
+if(percentage4 > percentage1 && percentage4 > percentage2 && percentage4 > percentage3 ) { 
+	show("<h3>CLARA WON THE ELECTION!</h3>") 
+	show("<strong><big>your country is in great hands go girl power, it will prosper with its fantastic leader</big></strong>")
+}
+</script> 
