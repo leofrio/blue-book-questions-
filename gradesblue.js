@@ -1,4 +1,4 @@
-//blue book question 20  
+//blue book chapter 5 question 20  
 function skip() { 
 	document.write("<br>") 
 } 
