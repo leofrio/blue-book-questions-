@@ -1,0 +1,58 @@
+<script>
+//chapter 6 question 2
+function skip() { 
+	document.write("<br>")
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+var a = [] 
+var b2=[] 
+var b3=[] 
+var b23=[] 
+var g=0 
+var h=0 
+var y=0 
+var arnaldo; 
+var t; 
+var u; 
+show("<h3>this program takes 7 numbers you type and see which ones are multiple of 2,3, and both </h3>")
+for(var i =0;i < 7; i++) { 
+	var number=parseInt(prompt("say a whole number, person number " + (i+1))) 
+	a[i]=number 
+	for(var c=1;c <= number; c++) { 
+		if(2*c == number) { 
+			b2[g]=number 	
+			g++ 
+			t=c
+		}
+		if(3*c == number) { 
+			b3[h]=number
+			h++ 
+			u=c
+		} 
+	} 
+	if(3*u == 2*t ) { 
+		b23[y]=number
+		y++
+	} 
+} 
+for(var i =0;i <= a.length-1; i++) { 
+	console.log(a[i])
+}  
+document.write("the multiples of 2 among the numbers you typed are:")
+for(var i =0;i <= b2.length-1; i++) { 
+	document.write(b2[i] + ";")
+}  
+skip() 
+document.write("the multiples of 3 among the numbers you typed are:")
+for(var i =0;i <= b3.length-1; i++) { 
+	document.write(b3[i] + ";")
+} 
+skip() 
+document.write("the multiples of 2 and 3 among the numbers you typed are:")  
+for(var i =0;i <= b23.length-1; i++) { 
+	document.write(b23[i] + ";")
+} 
+</script>
