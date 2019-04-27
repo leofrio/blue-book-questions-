@@ -1,0 +1,40 @@
+<script>  
+function skip() { 
+	document.write("<br>")
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+console.log("blue book chp 5 question 25")
+var value=parseFloat(prompt("what is the value of your transaction?"))
+var type=prompt("please chose a type of saving. 1-regular savings 2-savings plus 3-fixed savings, please type only the numbers or the full word")
+var f=0
+if(type == "1" || type == "regular savings") { 
+	var monthtype1=(value * 0.015)
+	show("your monthly money taking away " + monthtype1 + "$") 
+	for(var n = 0 ;value >= n ; value=(value - monthtype1)) { 
+		show("the amount of money you have on month " + f + " equals " +  value + "$")
+		f=f+1
+	} 
+	show("the amount of interest you paid equals:" + (monthtype1 * (f-1)) + "$")
+} 
+if(type == "2" || type == "savings plus") { 
+	var monthtype2=(value * 0.02)
+	show("your monthly money taking away " + monthtype2 +"$") 
+	for(var n = 0 ;value >= n ; value=(value - monthtype2)) { 
+		show("the amount of money you have on month " + f + " equals " +  value + "$")
+		f=f+1
+	} 
+	show("the amount of interest you paid equals:" + (monthtype2 * (f-1)) + "$")
+} 
+if(type == "3" || type == "fixed savings") { 
+	var monthtype3=(value * 0.04)
+	show("your monthly money taking away " + monthtype3 + "$") 
+	for(var n = 0 ;value >= n ; value=(value - monthtype3)) { 
+		show("the amount of money you have on month " + f + " equals " +  value + "$")
+		f=f+1
+	} 
+	show("the amount of interest you paid equals:" + (monthtype3 * (f-1)) + "$")
+}
+</script>

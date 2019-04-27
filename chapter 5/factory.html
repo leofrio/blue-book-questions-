@@ -1,0 +1,49 @@
+<h1>factory profit worker question</h1>
+<script>
+function skip() { 
+	document.write("<br>") 
+} 
+function show(text) { 
+	document.write(text) 
+	skip() 
+} 
+function A(al) { 
+	alert(al) 
+}
+function addupvalueboth(s,a) { 
+	var sum =(((s * 5)+(a*2.50))-((100000 * 5) +(50000 *2.50)))
+	return sum 
+}
+function calculateworkervalueboth(s,a,w) { 
+	var sum= ((((s * 5)+(a*2.50))-((100000 * 5) +(50000 *2.50)))/w).toFixed(2) 
+	return sum
+}  
+function calculateworkervalueone(s,w) {  
+	var sum= ((((s * 5) - (100000 * 5))/2)/w).toFixed(2) 
+	return sum 
+}  
+function addupvalueone(s) { 
+	var sum=(((s * 5) - (100000 * 5))/2) 
+	return sum
+}
+A("hello in this program we will calculate how much each worker from a factory of aluminium and stell got, and if there was profit or not") 
+var worker=parseInt(prompt("how many workers are working in the factory")) 
+var steel=parseInt(prompt("how many steel plates were produced that year?")) 
+var aluminium=parseInt(prompt("how many aluminium bars were produced that year?")) 
+A("the production goal for the steel plates are 100000 pieces, and the production goal for the aluminion bars is 50000 pieces, whether the goal for these has been reached or not will determine if there was or wasn't a profit division, lets see based on  the value you've given us!") 
+if(steel >= 100000) { 
+	if(aluminium >= 50000){ 
+		var payprofit= calculateworkervalueboth(steel,aluminium,worker) 
+		var addup=addupvalueboth(steel,aluminium)
+		show("yes that was division of the  profit(" + addup + "R$) ,and each worker got " + payprofit + "R$ each") 
+	} 
+	else { 
+		var payprofit= calculateworkervalueone(steel,worker) 
+		var addup=addupvalueone(steel) 
+		show("yes there was a profit division,but since only the steel bars reached the goal, the profit value was divided by 2, leading to a profit to be divided that equals " + addup + " and each worker got " + payprofit + "R$ each" )
+	} 
+} 
+else { 
+	show("there was no profit divisio since only the aluminium bars reached or passed the set goal")
+}
+</script>
