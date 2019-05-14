@@ -1,0 +1,35 @@
+<script>  
+function skip() { 
+	document.write("<br>")
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+var a=[]
+var b=[]
+var h=0
+var sum=0 
+for(var i=0; i< 10 ; i++) { 
+	var number=parseFloat(prompt("say a completely random number")) 
+	a[i]=number 
+	if(number < 0 ) { 
+		b[h]=number 
+		h++
+	} 
+	else {
+		sum=sum + number
+	}
+} 
+document.write("all the negative numbers are:")
+for(var i =0 ; i < b.length;i++) { 
+	if(i == b.lenght-1) {
+		document.write(b[i]) 
+	} 
+	else { 
+		document.write(b[i] + ";")
+	} 
+} 
+skip() 
+show("the sum of all the postive numbers equal: " + sum )
+</script>
