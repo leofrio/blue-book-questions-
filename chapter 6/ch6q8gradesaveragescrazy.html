@@ -1,0 +1,32 @@
+<script> 
+function skip() { 
+	document.write("<br>")
+}
+function show(text) { 
+	document.write(text) 
+	skip()
+}
+var a=[] 
+var b=[] 
+var biggestgrade; 
+var biggestname; 
+for(var i =0; i < 3; i++) { 
+	var name=prompt("hello there what is your name?") 
+	var average=parseFloat(prompt("so, " + name + " what was your average on the classes?")) 
+	a[i]=name 
+	b[i]=average 
+	if(average < 7) { 
+		var fgrade=10-average 
+		show("since " + name + " did not pass he needs to get " + fgrade + " on the final exam to pass")
+	}
+} 
+biggestgrade=b[0] 
+ 
+for(var i=0; i < b.length;i++) {
+	if(b[i] > biggestgrade) { 
+		biggestgrade=b[i]
+		biggestname=a[i]
+	} 
+}  
+show("the student who got the biggest average was " + biggestname + " with an average of " + biggestgrade)
+</script>
