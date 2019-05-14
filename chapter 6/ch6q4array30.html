@@ -1,0 +1,19 @@
+<script> 
+function skip() { 
+	document.write("<br>")
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+}  
+var f =0
+var a=[] 
+for(var i = 0;i < 15; i++) { 
+	a[i]=parseInt(prompt("say the number for fill the array in position " + i)) 
+	if(a[i] == 30) { 
+		f=f+1 
+		show("there a element of the array that equals 30 in postion " + i )
+	}
+} 
+show("which bring us to a total of " + f + " elements in the array that equals thirty")
+</script>

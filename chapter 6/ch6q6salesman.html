@@ -1,0 +1,48 @@
+<script> 
+function skip() { 
+    document.write("<br>")
+} 
+function show(text) { 
+    document.write(text) 
+    skip()
+} 
+function tv(a,b) { 
+    var c=b/100 
+    var sales=a*c 
+    return sales 
+} 
+var a=[] 
+var b=[] 
+var c=[] 
+var d=[] 
+var salessum=0
+for(var i=0;i < 10;i++) { 
+    var name=prompt("hello salesman!what is your name?") 
+    var sales=parseFloat(prompt("how much did you make in sales?")) 
+    var comission =parseFloat(prompt("what is the percentage of your comission?")) 
+    a[i]=name 
+    b[i]=sales 
+    c[i]=comission  
+    var totalvalue=tv(sales,comission) 
+    salessum += sales
+    d[i]=totalvalue 
+    show("salesman: " + name + "; value earned: " + totalvalue + "$") 
+}
+show("the sum of the sales of all the vendors equals: " + salessum + "$")  
+var biggestvalue=d[0]  
+var biggestname=a[0] 
+var smallestvalue=d[0] 
+var smallestname=a[0]
+for(var i=0;i < d.length ;i++) { 
+    if(d[i] > biggestvalue ) { 
+        biggestvalue=d[i] 
+        biggestname=a[i]
+    } 
+    if(d[i] < smallestvalue) { 
+        smallestvalue=d[i] 
+        smallestname=a[i]
+    }
+} 
+show("the salesman with the highest received value is " + biggestname + " which got " + biggestvalue + "$ in total") 
+show("the salesman with the lowest received value is " + smallestname + " which got " + smallestvalue + "$ in total")
+</script>

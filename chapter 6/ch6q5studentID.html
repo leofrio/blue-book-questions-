@@ -1,0 +1,50 @@
+<script>
+function skip() { 
+	document.write("<br>") 
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+var a=[] 
+var b=[] 
+var ab=[] 
+var arnaldo=0  
+var ab2=[] 
+var arblaudo=0
+for(var i = 0;i <= 10; i++) { 
+	var logic=parseFloat(prompt("what is your school ID?,logic student n " + (i+1) + "?")) 
+	var programmer=parseFloat(prompt("what is your school ID?,programmer student n " + (i+1) + "?"))
+	a[i]= logic
+	b[i]= programmer  
+	for(var n=0 ; n < b.length;n++) {
+		if(a[i] == b[n]) { 
+			ab[arnaldo]=a[i] 
+			arnaldo++
+		} 
+	} 
+	for(var n=0 ; n < a.length;n++) {
+		if(a[n] == b[i]) { 
+			if(a[i] != b[i]) {
+				ab2[arblaudo]=b[i] 
+				arblaudo++ 
+			}
+		} 
+	}
+} 
+document.write("the students ID that are both in logic and programming are:") 
+console.log("this is a:")
+for(var i=0 ;i < a.length;i++ ) { 
+	console.log(a[i] + ";")
+}  
+console.log("this is b:")
+for(var i=0 ;i < b.length;i++ ) { 
+	console.log(b[i] + ";")
+}
+for(var i=0 ;i < ab.length;i++ ) { 
+	document.write(ab[i] + ";") 
+}  
+for(var i=0 ;i < ab2.length;i++ ) { 
+	document.write(ab2[i] + ";") 
+} 
+</script>
