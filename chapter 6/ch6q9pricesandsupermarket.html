@@ -1,0 +1,41 @@
+<script>  
+//blue book chapter 7
+function skip() { 
+	document.write("<br>")
+} 
+function show(text) { 
+	document.write(text) 
+	skip()
+} 
+var a=[] 
+var b=[] 
+var c=[] 
+var newprice;
+for(var i =0;i < 10;i++) { 
+	var name=prompt("what is the name of your product?")  
+	var code=Math.round(Math.random() * 3000)
+	var price=parseFloat(prompt("what is the price of your product?"))  
+	a[i]=name 
+	b[i]=code 
+	c[i]=price
+	console.log(b[i]) 
+	if(code/2 == Math.round(code/2) || price > 1000) { 
+		if(code/2 == Math.round(code/2)) { 
+			newprice=price *1.15 
+			if(price > 1000) { 
+				newprice= price * 1.20
+			}
+		} 
+		else { 
+			newprice=price * 1.10 
+			if(code/2 == Math.round(code/2)) { 
+					newprice= price * 1.20
+			}
+		}
+	} 
+	else { 
+		newprice=price
+	} 
+	show((i+1) + ". name: " + a[i] + " old price: " + price + "$ new price: " + newprice + "$")
+}	
+</script>
